@@ -39,7 +39,8 @@ func getBody(_ http.ResponseWriter, r *http.Request) {
 	if strings.HasPrefix(groupMessage.GetMessage(), "/帮助") {
 		pluginName := strings.TrimPrefix(groupMessage.GetMessage(), "/帮助")
 		pluginName = strings.Trim(pluginName, " ")
-		pluginsHelp := "本群已经添加 " + strconv.Itoa(len(initPlugins)) + " 个插件：\n"
+		pluginsHelp := "项目 repo：https://github.com/Cody-Wolf/GetOneFur/tree/main \n" +
+			"本群已经添加 " + strconv.Itoa(len(initPlugins)) + " 个插件：\n"
 		for _, plugin := range initPlugins {
 			help := "【插件名：" + plugin.GetPluginName() + "】\n说明：\n" + plugin.HelpInfo() + "\n"
 			if plugin.GetPluginName() == pluginName {
