@@ -17,7 +17,7 @@ type Repeater struct {
 }
 
 func (r *Repeater) HelpInfo() string {
-	return "每个群达到 3 次的重复消息就会被复读一次。再次重复不会复读。"
+	return "每个群达到 3 次的重复消息就会被复读一次。再次重复不会复读。\n"
 }
 
 func (r *Repeater) GetPluginName() string {
